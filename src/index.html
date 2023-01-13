@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.html',{
+"title":"GoCorona"
+})
+
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <!-- @@include('html/_header.html',{}) -->
+    @@include('html/_header.html')
+    <!-- Main -->
+    <main class="main">
+      <!-- Get-started -->
+      @@include('html/_get-started.html')
+      <!-- Stay-safe -->
+      @@include('html/_stay-safe.html')
+      <!-- Experts -->
+      @@include('html/_experts.html')
+      <!-- Healthcare -->
+      @@include('html/_healthcare.html')
+    </main>
+    <!-- Footer -->
+    @@include('html/_footer.html')
+  </div>
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

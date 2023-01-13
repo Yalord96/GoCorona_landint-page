@@ -1,0 +1,119 @@
+@import "vendors/normalize";
+@import "mixins/font-face";
+@import "vendors/reset";
+@import "vendors/fonts";
+@import "vendors/vars";
+
+@import "header";
+@import "get-started";
+@import "stay-safe";
+@import "experts";
+@import "healthcare";
+@import "footer";
+
+body {
+  font-family: Rubik;
+  font-size: 12px;
+  color: #616161;
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1087px;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+}
+
+// PC
+@media (max-width: 1087px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+}
+// Tablet
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
+}
+// Mobile
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
+}
+// Small Mobile
+@media (max-width: 467.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
+}
+
+// Custom button
+.button {
+  display: inline-block;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.14em;
+  color: #fcfdfe;
+  padding: 14px 30px;
+  border-radius: 5px;
+  background-color: #ec5863;
+  transition: background-color all 0.3s ease;
+  &:hover {
+    background-color: #f64d58;
+  }
+}
+
+// Custom text block
+.text-block {
+  &__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 126%;
+    color: #000;
+    margin: 0;
+    @media (max-width: 767.98px) {
+      font-size: 34px;
+    }
+    & span {
+      color: #ec5863;
+    }
+    &_blue span {
+      color: #4285f4;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__text {
+    line-height: 138.5%;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    &_mw {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  &__button {
+  }
+  &_center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,5 @@
+@use "sass:math";
+
+$containerWidth: 1200;
+$containerPadding: 30;
+$containerSidePadding: math.div($containerPadding, 2);
